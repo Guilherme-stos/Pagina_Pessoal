@@ -77,3 +77,32 @@ strong {
 .titulo_linguas {
     border: 5px dotted;
 }
+
+/*Aqui começa a Segunda Página*/
+
+.titulo_secundario { /*A partir daqui todos os titulos secundarios são iguais*/
+    font-family: var(--fonte-primaria);
+    color: var(--cor-principal);
+    text-align: center;
+    font-size: 30px;
+}
+.container_formacao {
+    display: flex;
+    justify-content: space-between;
+    font-family: var(--fonte-secundaria);
+    text-align: center;
+}
+.ensino_superior {
+    width: 50%;
+    padding: 15px;
+}
+.tecnico {
+    width: 50%;
+    margin-left: 15px;
+    padding: 15px;
+}
+.programacao {
+    text-align: center;
+    border: 5px dotted var(--cor-principal);
+    border-radius: 15px;
+}
