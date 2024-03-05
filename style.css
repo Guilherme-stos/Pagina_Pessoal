@@ -106,3 +106,20 @@ strong {
     border: 5px dotted var(--cor-principal);
     border-radius: 15px;
 }
+
+/* Terceira Página */
+
+.container_experiencia {
+    display: grid;
+    grid-template-columns: 35% 35%;
+    margin-left: 20%;
+}
+
+.cargo_item {
+    font-family: var(--fonte-secundaria);
+    border: 3px solid black;
+    border-radius: 15px;
+    padding: 40px;
+    margin: 25px;
+    font-size: 20px;
+}
