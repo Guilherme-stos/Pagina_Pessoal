@@ -123,3 +123,18 @@ strong {
     margin: 25px;
     font-size: 20px;
 }
+
+/* Quinta Página */
+
+.lista_abas {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+}
+
+.abas_item {
+    text-decoration: none;
+    font-family: var(--fonte-primaria);
+    color: black;
+    font-size: 25px;
+}
