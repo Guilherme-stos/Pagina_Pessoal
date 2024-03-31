@@ -3,6 +3,10 @@
         --fonte-secundaria: NANUM GOTHIC;
         --cor-principal: #006CD1;
 }
+@font-face {
+    font-family: outline;
+    src: url(Fontes-Externas/Chalk\ Line\ Outline.ttf);
+}
 
 body { /* Resetei o Padrão do navegador */
     margin: 0;
@@ -23,6 +27,9 @@ body { /*Transformei e fiz a estrutura básica */
     font-family: var(--fonte-primaria);
     min-height: 100vh;
 }
+.menu_lista > a:hover {
+    color: white;
+}
 .menu_lista { /* Resetei o padrão lista */
     list-style-type: none;
     margin: 0;
@@ -40,16 +47,17 @@ body { /*Transformei e fiz a estrutura básica */
     text-decoration: none;
     color: black;
 }
-h1 { /* Apliquei estilo no Titulo */
+.titulo-principal { /* Apliquei estilo no Titulo */
     font-family: var(--fonte-primaria);
     font-size: 5em;
     border: 5px dotted;
     margin: 1% 15% 5%;
     text-align: center;
 }
-strong {
+.sobre-mim-frase {
     color: var(--cor-principal);
     font-family: var(--fonte-primaria);
+    font-weight: bold;
 }
 .apresentacao_sobremim {
     font-family: var(--fonte-secundaria);
@@ -123,6 +131,16 @@ strong {
     margin: 25px;
     font-size: 20px;
 }
+.exp-links {
+    text-decoration: none;
+    color: black;
+}
+.exp-links:hover {
+    background-color: var(--cor-principal);
+    padding: 2px;
+    border-radius: 15px;
+    color: white;
+}
 
 /* Quinta Página */
 
@@ -137,4 +155,71 @@ strong {
     font-family: var(--fonte-primaria);
     color: black;
     font-size: 25px;
+}
+
+/* Sexta Página*/
+.contato-text  > h2 {
+    font-family: var(--fonte-primaria);
+    color: var(--cor-principal);
+    font-size: 3em;
+}
+
+.contato-text > p {
+    font-family: var(--fonte-secundaria);
+    font-size: 2em;
+}
+.contato-text > a {
+    text-decoration: none;
+    font-family: var(--fonte-secundaria);
+    color: black;
+    font-size: 2em;
+}
+.contato-text > a:hover {
+    background-color: var(--cor-principal);
+    padding: .8em;
+    border-radius: 15px;
+    color: white;
+}
+.contato-item {
+    border: 2px solid black;
+    padding: 4em;
+}
+/* Home */
+
+
+.home {
+    display: grid;
+    grid-template-columns: 68% 32%;
+    min-width: 100vw;
+}
+.foto {
+    max-height: 100vh;
+}
+.titulo-home1 {
+    font-family: var(--fonte-primaria);
+    font-size: 5em;
+    margin: 10px;
+    padding: 20px;
+}
+.home-section > p {
+    font-family: var(--fonte-secundaria);
+    font-size: 1.5em;
+    margin: 10px;
+}
+.titulo-home2 {
+    display: inline-block;
+    text-decoration: none;
+    font-family: var(--fonte-primaria);
+    background-color: var(--cor-principal);
+    padding: 10px;
+    border-radius: 15px;
+    margin: 10px;
+    font-size: 5em;
+    color: black;
+}
+.sobremim_link:hover {
+    color: white;
+}
+.outline {
+
 }
