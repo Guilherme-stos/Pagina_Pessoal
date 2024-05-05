@@ -64,6 +64,9 @@ nav {
 
 /* Conteúdo Principal */
 
+main {
+    max-width: 500px;
+}
 
 .foto_perfil {
     background-image: url(foto/perfil.png);
@@ -78,6 +81,7 @@ nav {
 .container > h1 {
     padding-top: 25px;
     text-align: center;
+    color: #fff;
 }
 
 /* Rodapé */
