@@ -10,24 +10,28 @@ body {
 
 /* Cabeçalho */
 
-header {
-    padding: 24px;
-}
-
-.menu_lista {
-    display: flex;
+nav {
+    padding-top: 25px;
+    height: 10vh;
+    width: 70vw;
     list-style: none;
-    justify-content: space-between;
-    margin: 0px 14rem;
-    padding: 25px;
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+    align-items: center;
+    min-width: 600px;
+    gap: 3rem;
 }
 .menu_item {
     color: white;
     font-size: 1.2rem;
     text-decoration: none;
+    letter-spacing: 1px;
 }
 .menu_item:hover {
-    color: rgb(199, 54, 2);
+    border-bottom: solid 2px white;
+    padding: 5px;
+    transition: 0.2s
 }
 
 .dropdown {
@@ -53,20 +57,27 @@ header {
     .dropdown {
         display: block;
     }
-    .menu_lista {
+    /* .menu_lista { */
         display: none;
     }
 }
 
 /* Conteúdo Principal */
 
-main {
-    color: white;
+
+.foto_perfil {
+    background-image: url(foto/perfil.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 230px;
+    width: 230px;
+    margin: auto;
+    border-radius: 500px;
 }
 
-main > div {
-    width: 70%;
-    margin: auto;
+.container > h1 {
+    padding-top: 25px;
+    text-align: center;
 }
 
 /* Rodapé */
@@ -76,9 +87,4 @@ footer {
 	padding: 20px;
 	text-align: center;
 	margin-top: 50px;
-}
-
-footer > a {
-	color: #fff;
-	text-decoration: none;
 }
