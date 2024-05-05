@@ -3,9 +3,15 @@
     padding: 0;
 }
 
+body {
+    background-image: linear-gradient(to bottom, #050F68,#010159,#01014A,#01013B,#00002E);
+    height: 100vh;
+}
+
+/* Cabeçalho */
+
 header {
-    background-color: rgba(1, 1, 104, 0.993);
-    padding: 16px;
+    padding: 24px;
 }
 
 .menu_lista {
@@ -13,6 +19,7 @@ header {
     list-style: none;
     justify-content: space-between;
     margin: 0px 14rem;
+    padding: 25px;
 }
 .menu_item {
     color: white;
@@ -22,8 +29,38 @@ header {
 .menu_item:hover {
     color: rgb(199, 54, 2);
 }
+
+.dropdown {
+    /* display: none; */
+    background-color: rgba(128, 128, 128, 0.301);
+    width: 15rem;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+}
+.dropdown_item {
+    list-style: none;
+    text-decoration: none;
+    color: white;
+    padding: 25px;
+}
+
+.dropdown_lista:hover {
+    padding: 55px;
+}
+
+@media (max-width: 750px) {
+    .dropdown {
+        display: block;
+    }
+    .menu_lista {
+        display: none;
+    }
+}
+
+/* Conteúdo Principal */
+
 main {
-    background-color: #333;
     color: white;
 }
 
@@ -32,26 +69,16 @@ main > div {
     margin: auto;
 }
 
+/* Rodapé */
+
 footer {
-	background-color: #333;
 	color: #fff;
 	padding: 20px;
 	text-align: center;
 	margin-top: 50px;
 }
 
-ul {
-	list-style: none;
-	padding: 0;
-	margin: 0;
-}
-
-li {
-	display: inline-block;
-	margin: 0 10px;
-}
-
-a {
+footer > a {
 	color: #fff;
 	text-decoration: none;
 }
