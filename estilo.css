@@ -7,7 +7,7 @@ body {
     background-image: linear-gradient(to bottom, #050F68,#010159,#01014A,#01013B,#00002E);
     height: 100vh;
     background-repeat: no-repeat;
-    padding-bottom: 100%;
+    padding-bottom: 75%; /*ajustei o tamanho do site*/
 }
 
 /* Cabeçalho */
