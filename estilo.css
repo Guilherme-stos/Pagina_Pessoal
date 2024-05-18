@@ -6,7 +6,7 @@
 body {
     background-image: linear-gradient(to bottom, #050F68,#010159,#01014A,#01013B,#00002E);
     height: 100vh;
-    background-repeat: no-repeat;
+    background-attachment: fixed; /*Ajustei o tamanho do background*/
     padding-bottom: 75%; /*ajustei o tamanho do site*/
 }
 
@@ -29,6 +29,7 @@ nav {
     font-size: 1.2rem;
     text-decoration: none;
     letter-spacing: 1px;
+    text-align: center;
 }
 .menu_item:hover {
     border-bottom: solid 2px white;
@@ -112,42 +113,57 @@ main {
     color: #fff;
 }
 
-.container_formacao {
-    background-color: rgba(255, 255, 255, 0.164);
-    display: inline-block;
-    height: 100px;
-    text-align: center;
-    border: 3px solid rgba(255, 255, 255, 0.089);
-    width: 27rem;
-    padding-top: 20px;
-    margin-top: 45px;
-    border-radius: 15px;
-}
 .forma {
-    display: grid;
-    grid-template: 200px / 50% 50%;
-}
-@media (max-width:1342px) {
-    .forma {
-        grid-template: 200px / 0;
-    }
-}
-.container_exp {
-    display: grid;
-    grid-template: 50% 50% / 50% 50%;
-}
-.exp_cargo{
-    background-color: rgba(255, 255, 255, 0.164);
-    display: inline-block;
-    height: 100px;
-    text-align: center;
-    border: 3px solid rgba(255, 255, 255, 0.089);
-    width: 27rem;
-    padding-top: 20px;
-    margin-top: 45px;
-    border-radius: 15px;
+    display: flex;
 }
 
+.superior {
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+.tecnico {
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.container_formacao {
+    background-color: rgba(255, 255, 255, 0.164);
+    border: 3px solid rgba(255, 255, 255, 0.089);
+    width: 100%;
+    text-align: center;
+}
+
+.container_exp {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.exp_cargo {
+    background-color: rgba(255, 255, 255, 0.164);
+    border: 3px solid rgba(255, 255, 255, 0.089);
+    text-align: center;
+}
+
+.exp_cargo > a {
+    text-decoration: none;
+    color: white;
+}
+
+.fqs {
+    border-top-left-radius: 15px;
+}
+
+.ggp {
+    border-top-right-radius: 15px;
+}
+
+.solutta {
+    border-bottom-left-radius: 15px;
+}
+
+.agco {
+    border-bottom-right-radius: 15px;
+}
 
 /* Rodapé */
 
