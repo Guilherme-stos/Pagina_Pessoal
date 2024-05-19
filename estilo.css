@@ -82,6 +82,9 @@ main {
     color: white;
     font-size: 1.2rem;
 }
+
+/*Sessão Sobre Mim*/
+
 .main_container {
     background-color: rgba(255, 255, 255, 0.137);
     margin: 30px 12rem;
@@ -113,6 +116,8 @@ main {
     color: #fff;
 }
 
+/*Sessão Formação*/
+
 .forma {
     display: flex;
 }
@@ -132,6 +137,8 @@ main {
     width: 100%;
     text-align: center;
 }
+
+/*Sessão Experiências*/
 
 .container_exp {
     display: grid;
@@ -165,19 +172,28 @@ main {
     border-bottom-right-radius: 15px;
 }
 
+/*Sessão Competências*/
+
+.dropdown_cursos {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+.container_competencias {
+    background-color: rgba(255, 255, 255, 0.164);
+    border: 3px solid rgba(255, 255, 255, 0.089);
+    text-align: center;
+}
+
+
+
+/*Sessão Portifólio*/
+
 .port_container {
     display: flex;
     justify-content: space-between;
 }
-
-.ico_wpp {
-    position: fixed;
-    width: 60px;
-    height: 60px;
-    bottom: 40px;
-    right: 40px;
-}
-
 
 .card-body {
     background-color: #000c7546;
@@ -185,6 +201,16 @@ main {
 
 .btn-primary {
     background-color: #050F68;
+}
+
+/*Sessão Contatos*/
+
+.ico_wpp { /* icone de Whatsapp */
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    right: 40px;
 }
 
 .contatos_container {
@@ -198,6 +224,11 @@ main {
     color: white;
 }
 
+/*Links hover*/
+
+a:hover {
+    color: orangered;
+}
 
 /* Rodapé */
 
