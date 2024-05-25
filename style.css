@@ -1,225 +1,245 @@
-:root { /* Criei variáveis para utilizar */
-        --fonte-primaria: BEBAS NEUE;
-        --fonte-secundaria: NANUM GOTHIC;
-        --cor-principal: #006CD1;
-}
-@font-face {
-    font-family: outline;
-    src: url(Fontes-Externas/Chalk\ Line\ Outline.ttf);
-}
-
-body { /* Resetei o Padrão do navegador */
+* {
     margin: 0;
     padding: 0;
 }
 
-body { /*Transformei e fiz a estrutura básica */
-    display: grid;
-    grid-template-columns: 20% 80%;
+body {
+    background-image: linear-gradient(to bottom, #050F68,#010159,#01014A,#01013B,#00002E);
+    height: 100vh;
+    background-attachment: fixed; /*Ajustei o tamanho do background*/
+    padding-bottom: 75%; /*ajustei o tamanho do site*/
 }
-.conteudo_principal { /* Separei o menu do conteúdo e defini a altura */
-    margin-left: 20px;
-    margin-right: 30px;
-    min-height: 100vh;
-}
-.menu_lateral { /* Apliquei estilo */
-    background-color: var(--cor-principal);
-    font-family: var(--fonte-primaria);
-    min-height: 100vh;
-}
-.menu_lista > a:hover {
-    color: white;
-}
-.menu_lista { /* Resetei o padrão lista */
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-.menu_lista { /* Utilizei Flexbox para separar itens da lista */
-    display: flex;
-    flex-direction: column;
-    font-size: 45px;
-    min-height: 100vh;
-    align-items: center;
-    justify-content: space-between;
-}
-.menu_item { /* Apliquei estilo nos item */ 
-    text-decoration: none;
-    color: black;
-}
-.titulo-principal { /* Apliquei estilo no Titulo */
-    font-family: var(--fonte-primaria);
-    font-size: 5em;
-    border: 5px dotted;
-    margin: 1% 15% 5%;
-    text-align: center;
-}
-.sobre-mim-frase {
-    color: var(--cor-principal);
-    font-family: var(--fonte-primaria);
-    font-weight: bold;
-}
-.apresentacao_sobremim {
-    font-family: var(--fonte-secundaria);
-    font-size: 22px;
-}
-.container_sobremim {
-    font-family: var(--fonte-secundaria);
+
+/* Cabeçalho */
+
+nav {
+    padding-top: 25px;
+    height: 10vh;
+    width: 70vw;
+    list-style: none;
     display: flex;
     justify-content: space-around;
-    margin-top: 35px;
-    text-align: justify;
+    margin: auto;
+    align-items: center;
+    min-width: 600px;
+    gap: 3rem;
 }
-.profissionalmente {
-    background-color: var(--cor-principal);
-    width: 50%;
-    padding: 15px;
+.menu_item {
+    color: white;
+    font-size: 1.2rem;
+    text-decoration: none;
+    letter-spacing: 1px;
+    text-align: center;
+}
+.menu_item:hover {
+    border-bottom: solid 2px white;
+    padding: 5px;
+    transition: 0.2s
+}
+
+.dropdown {
+    /* display: none; */
+    background-color: rgba(128, 128, 128, 0.301);
+    width: 15rem;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+}
+.dropdown_item {
+    list-style: none;
+    text-decoration: none;
+    color: white;
+    padding: 25px;
+}
+
+.dropdown_lista:hover {
+    padding: 55px;
+}
+
+@media (max-width: 750px) {
+    .dropdown {
+        display: block;
+    }
+    /* .menu_lista { */
+        display: none;
+    }
+}
+
+/* Conteúdo Principal */
+
+main {
+    max-width: 500px;
+}
+.dev_cont{
+    text-align: center;
+    margin-top: 15px;
+    font-size: 1.7rem;
+    font-weight: bold;
+    text-decoration: underline;
+
+}
+.container {
+    color: white;
+    font-size: 1.2rem;
+}
+
+/*Sessão Sobre Mim*/
+
+.main_container {
+    background-color: rgba(255, 255, 255, 0.137);
+    margin: 30px 12rem;
+    padding: 35px;
+    border: 2px solid rgba(255, 255, 255, 0.075);
     border-radius: 15px;
-    font-size: 20px;
+    letter-spacing: 1.5px;
 }
-.titulo_sobremim {
-    font-family: var(--fonte-primaria);
-    text-align: center;
-    font-size: 35px;
+.main_container > h2 {
+    padding-bottom: 25px;
+    text-decoration: underline;
 }
-.titulo_linguas {
-    border: 5px dotted;
+.main_container > p {
+    padding-bottom: 5.5px;
+}
+.foto_perfil {
+    background-image: url(foto/perfil.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 230px;
+    width: 230px;
+    margin: auto;
+    border-radius: 500px;
 }
 
-/*Aqui começa a Segunda Página*/
-
-.titulo_secundario { /*A partir daqui todos os titulos secundarios são iguais*/
-    font-family: var(--fonte-primaria);
-    color: var(--cor-principal);
+.container > h1 {
+    padding-top: 25px;
     text-align: center;
-    font-size: 30px;
+    color: #fff;
 }
-.container_formacao {
+
+/*Sessão Formação*/
+
+.forma {
     display: flex;
-    justify-content: space-between;
-    font-family: var(--fonte-secundaria);
-    text-align: center;
 }
-.ensino_superior {
-    width: 50%;
-    padding: 15px;
+
+.superior {
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
 }
 .tecnico {
-    width: 50%;
-    margin-left: 15px;
-    padding: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
 }
-.programacao {
+
+.container_formacao {
+    background-color: rgba(255, 255, 255, 0.164);
+    border: 3px solid rgba(255, 255, 255, 0.089);
+    width: 100%;
     text-align: center;
-    border: 5px dotted var(--cor-principal);
-    border-radius: 15px;
 }
 
-/* Terceira Página */
+/*Sessão Experiências*/
 
-.container_experiencia {
+.container_exp {
     display: grid;
-    grid-template-columns: 35% 35%;
-    margin-left: 20%;
+    grid-template-columns: 50% 50%;
 }
 
-.cargo_item {
-    font-family: var(--fonte-secundaria);
-    border: 3px solid black;
-    border-radius: 15px;
-    padding: 40px;
-    margin: 25px;
-    font-size: 20px;
+.exp_cargo {
+    background-color: rgba(255, 255, 255, 0.164);
+    border: 3px solid rgba(255, 255, 255, 0.089);
+    text-align: center;
 }
-.exp-links {
+
+.exp_cargo > a {
     text-decoration: none;
-    color: black;
-}
-.exp-links:hover {
-    background-color: var(--cor-principal);
-    padding: 2px;
-    border-radius: 15px;
     color: white;
 }
 
-/* Quinta Página */
+.fqs {
+    border-top-left-radius: 15px;
+}
 
-.lista_abas {
+.ggp {
+    border-top-right-radius: 15px;
+}
+
+.solutta {
+    border-bottom-left-radius: 15px;
+}
+
+.agco {
+    border-bottom-right-radius: 15px;
+}
+
+/*Sessão Competências*/
+
+.dropdown_cursos {
     display: flex;
-    list-style: none;
+    flex-direction: column;
+    gap: 35px;
+}
+
+.container_competencias {
+    background-color: rgba(255, 255, 255, 0.164);
+    border: 3px solid rgba(255, 255, 255, 0.089);
+    text-align: center;
+}
+
+
+
+
+/*Sessão Portifólio*/
+
+.port_container {
+    display: flex;
     justify-content: space-between;
 }
 
-.abas_item {
-    text-decoration: none;
-    font-family: var(--fonte-primaria);
-    color: black;
-    font-size: 25px;
+.card-body {
+    background-color: #000c7546;
 }
 
-/* Sexta Página*/
-.contato-text  > h2 {
-    font-family: var(--fonte-primaria);
-    color: var(--cor-principal);
-    font-size: 3em;
+.btn-primary {
+    background-color: #050F68;
 }
 
-.contato-text > p {
-    font-family: var(--fonte-secundaria);
-    font-size: 2em;
+/*Sessão Contatos*/
+
+.ico_wpp { /* icone de Whatsapp */
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    right: 40px;
 }
-.contato-text > a {
+
+.contatos_container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.contatos_container > a {
     text-decoration: none;
-    font-family: var(--fonte-secundaria);
-    color: black;
-    font-size: 2em;
-}
-.contato-text > a:hover {
-    background-color: var(--cor-principal);
-    padding: .8em;
-    border-radius: 15px;
     color: white;
 }
-.contato-item {
-    border: 2px solid black;
-    padding: 4em;
-}
-/* Home */
 
+/*Links hover*/
 
-.home {
-    display: grid;
-    grid-template-columns: 68% 32%;
-    min-width: 100vw;
+a:hover {
+    color: orangered;
 }
-.foto {
-    max-height: 100vh;
-}
-.titulo-home1 {
-    font-family: var(--fonte-primaria);
-    font-size: 5em;
-    margin: 10px;
-    padding: 20px;
-}
-.home-section > p {
-    font-family: var(--fonte-secundaria);
-    font-size: 1.5em;
-    margin: 10px;
-}
-.titulo-home2 {
-    display: inline-block;
-    text-decoration: none;
-    font-family: var(--fonte-primaria);
-    background-color: var(--cor-principal);
-    padding: 10px;
-    border-radius: 15px;
-    margin: 10px;
-    font-size: 5em;
-    color: black;
-}
-.sobremim_link:hover {
-    color: white;
-}
-.outline {
 
+/* Rodapé */
+
+footer {
+	color: #fff;
+	padding: 20px;
+	text-align: center;
+	margin-top: 50px;
+}
+
+.fa-brands:hover {
+    color: greenyellow;
 }
